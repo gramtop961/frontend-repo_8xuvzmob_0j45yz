@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import MagicalBackground from './components/MagicalBackground';
+import HeroSpline from './components/HeroSpline';
 import MovingNewspaper from './components/MovingNewspaper';
 import InvitationSections from './components/InvitationSections';
 import ClickHint from './components/ClickHint';
@@ -18,8 +19,13 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden overflow-y-auto">
+      {/* Layer 1: starry gradient base */}
       <MagicalBackground />
 
+      {/* Layer 2: interactive Spline hero (no negative z-index) */}
+      <HeroSpline />
+
+      {/* Layer 3: content */}
       <main className="relative z-10 flex min-h-screen items-center justify-center p-6">
         {!showSections && (
           <div className="w-full text-center">

@@ -16,7 +16,7 @@ export default function ClickHint({ visible = true }) {
         transition={{ duration: 1.6, repeat: Infinity }}
         className="text-sm tracking-wide"
       >
-        Tap the letter to open
+        Tap the moving picture to open
       </motion.span>
     </motion.div>
   );
